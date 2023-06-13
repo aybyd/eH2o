@@ -12,7 +12,7 @@
 #define DO_PIN 9
 #define WATER_INTAKE_PIN 22
 #define WATER_OUT_PIN 23
-#define PUMP_DURATION 15000
+#define PUMP_DURATION 17000
 #define VREF 5000     //VREF (mv)
 #define ADC_RES 1024  //ADC Resolution
 //Amonia Sensor
@@ -34,14 +34,14 @@
 #define CAL2_T (15)    //℃
 SoftwareSerial sw_master(21, 20);
 SimpleTimer taskTimer(1800000);  // 30 minutes
-SimpleTimer taskTimer1(600000);     // 10 minute/s
+SimpleTimer taskTimer1(900000);     // 10 minute/s
 
 DFRobot_PH ph;
 DFRobot_EC10 ec;
 DS18S20 temp;
 
 float ec_voltage, ph_voltage, phValue, ecValue, curr_temp = 25, VRL, Rs, ratio;
-String hw_id = "98CDAC25ACA2";
+String hw_id = "18FE34CACF16";
 
 const uint16_t DO_Table[41] = {
   14460, 14220, 13820, 13440, 13090, 12740, 12420, 12110, 11810, 11530,
