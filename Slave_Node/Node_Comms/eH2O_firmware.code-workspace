@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "eH2O_firmware",
+			"path": "../../eH2O_firmware"
+		},
+		{
+			"name": "Node_Comms",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
