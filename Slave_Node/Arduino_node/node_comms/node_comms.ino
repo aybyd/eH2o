@@ -8,12 +8,11 @@
 #include <SoftwareSerial.h>
 #include <ArduinoJson.h>
 
+
+
 SoftwareSerial nodemcu(D1, D2);
 SimpleTimer secondTimer;
 WiFiManager wifiManager;
-
-unsigned long previousMillis = 0;
-unsigned long interval = 10000;
 
 uint8_t hardware_id[6];
 char id_char[18];

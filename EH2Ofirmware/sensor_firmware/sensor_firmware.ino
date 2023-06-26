@@ -101,7 +101,7 @@ void getTemperature() {
 void getData(Data* data) {
   digitalWrite(WATER_INTAKE_PIN, HIGH);
   unsigned long startTime = millis();
-  while (millis() - startTime < 60000) {  //time interval: 1s
+  while (millis() - startTime < 60000) {  //time interval: 1m
     getTemperature();
     ph_voltage = analogRead(PH_PIN) / 1024.0 * 5000;  // read the ph voltage
     phValue = ph.readPH(ph_voltage, curr_temp);       // convert voltage to pH with temperature compensation
